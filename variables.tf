@@ -2,41 +2,41 @@
  * Common
  */
 variable "PROJECT" {
-  description = "DNS-compatible Project Prefix"
+  description = DNS-compatible Project Prefix
 }
 
 variable "INSTANCE" {
-  description = "DNS-compatible Instance Name"
+  description = DNS-compatible Instance Name
 }
 
 variable "ENVIRONMENT" {
-  description = "DNS-compatible Environment Name (dev, stag, prod)"
+  description = DNS-compatible Environment Name (dev, stag, prod)
 }
 
 variable "REGION" {
-  description = "Azure Region"
+  description = Azure Region
 }
 /*
  * VNET
  */
 variable "VNET_NAME" {
-  type = "string"
+  type = string
 }
 variable "VNET_ADDR_SPACE" {
-  description = "The address space that is used by the virtual network."
+  description = The address space that is used by the virtual network.
   default     = "10.10.0.0/16"
 }
 
 variable "DNS_SERVERS" {
-  description = "The DNS servers to be used with vNet."
+  description = The DNS servers to be used with vNet.
   default     = []
 }
-variable "SUBNET_NAMES" {
-  description = "A list of public subnets inside the vNet."
+variable "SUBNET_NAMES" 
+  description = A list of public subnets inside the vNet.
   default     = ["aks-subnet"]
 }
 variable "SUBNET_PREFIXES" {
-  description = "The address prefix to use for the subnet."
+  description = the address prefix to use for the subnet.
   default     = ["10.10.1.0/24"]
 }
 
@@ -45,7 +45,7 @@ variable "SUBNET_PREFIXES" {
  */
 
 variable "AKS_SSH_ADMIN_KEY" {
-  description = "Admin SSH Public Key for AKS Agent VMs"
+  description = Admin SSH Public Key for AKS Agent VMs
 }
 variable "K8S_VER" {
   type = "string"
